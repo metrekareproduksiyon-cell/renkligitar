@@ -47,6 +47,11 @@
   footer { text-align:center; color:var(--muted); font-size:14px; margin-top:34px; }
   footer a { color:inherit; }
 </style>
+<!-- Meta Pikseli (reklam ölçümü) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','7045168125564182');fbq('track','PageView');
+</script>
 </head>
 <body>
 <main>
@@ -86,12 +91,23 @@
 
   <footer>
     <p>Geliştirici: Fatih Bilgiç · <a href="https://nemorit.github.io/renkligitar/gizlilik.html">Gizlilik Politikası</a></p>
+    <p style="font-size:12px">Bu sayfa, reklamların ölçülmesi için Meta Pikseli (çerez) kullanır. Uygulamanın kendisi bu verileri kullanmaz.</p>
   </footer>
 </main>
 <script>
   // Yönlendirme yok: yalnız ziyaretçinin cihazına uygun buton en üste alınır.
   var ua = navigator.userAgent || "";
   if (/android/i.test(ua)) document.getElementById("android").classList.add("oncelik");
+  // Mağaza tıklamasını Meta'ya bildir, sonra mağazaya git (olay gönderilmeden sayfa kapanmasın)
+  [["ios","RG_AppStore"],["android","RG_GooglePlay"]].forEach(function (x) {
+    var a = document.getElementById(x[0]);
+    a.addEventListener("click", function (e) {
+      if (!window.fbq) return;
+      e.preventDefault();
+      fbq("trackCustom", x[1], {platform: x[0]});
+      setTimeout(function () { location.href = a.href; }, 350);
+    });
+  });
 </script>
 </body>
 </html>
