@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renkli Gitar: Akor ve Şarkı</title>
+<meta name="description" content="Renkli Gitar ile akorları renkleriyle öğren: renkli akor şemaları, akor dizilimi, şarkılar, akort ölçer ve metronom. iPhone, iPad ve Android için.">
+<meta property="og:title" content="Renkli Gitar: Akor ve Şarkı">
+<meta property="og:description" content="Akorlarına renk kat. Renkli akor şemaları, dizilim, şarkılar, akort ölçer ve metronom.">
+<meta property="og:image" content="https://metrekareproduksiyon-cell.github.io/renkligitar/img/paylas.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://metrekareproduksiyon-cell.github.io/renkligitar/">
+<link rel="icon" href="img/simge.png">
+<style>
+  :root { --bg:#ffffff; --fg:#1b1530; --muted:#6e6a7c; --card:#f4f2f9; --koyu:#17122b; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0e0b18; --fg:#f4f1fb; --muted:#a9a2bf; --card:#1c1830; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:28px 16px 48px; }
+  .ust { text-align:center; padding:12px 0 8px; }
+  .ust img { width:112px; height:112px; border-radius:26px; box-shadow:0 12px 34px #6e56cf55; }
+  h1 { font-size:34px; line-height:1.15; margin:18px 0 4px; }
+  .alt { color:var(--muted); margin:0 0 6px; }
+  .serit { height:6px; max-width:280px; margin:16px auto 22px; border-radius:3px;
+           background:linear-gradient(90deg,#e5484d,#f76b15,#30a46c,#0090ff,#8e4ec6); }
+  .slogan { font-size:22px; font-weight:800; margin:0 0 20px; }
+  .dugmeler { display:flex; flex-direction:column; gap:12px; max-width:340px; margin:0 auto; }
+  .dugme { display:flex; align-items:center; gap:14px; padding:14px 22px; border-radius:16px; text-decoration:none;
+           background:var(--koyu); color:#fff; font-weight:700; transition:transform .15s; }
+  @media (prefers-color-scheme: dark) { .dugme { background:#fff; color:#17122b; } }
+  .dugme:hover { transform:translateY(-2px); }
+  .dugme svg { width:30px; height:30px; flex:none; }
+  .dugme span { display:flex; flex-direction:column; line-height:1.15; text-align:left; }
+  .dugme small { font-weight:500; font-size:13px; opacity:.8; }
+  .dugme b { font-size:20px; }
+  .dugme.oncelik { order:-1; }
+  .not { color:var(--muted); font-size:14px; text-align:center; margin:12px 0 0; }
+  .ekranlar { display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; padding:28px 2px 8px; }
+  .ekranlar img { width:min(46vw,220px); border-radius:22px; scroll-snap-align:center; flex:none; box-shadow:0 8px 24px #1b153022; }
+  h2 { font-size:22px; margin:30px 0 12px; }
+  .ozellik { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; padding:0; margin:0; list-style:none; }
+  @media (max-width:520px) { .ozellik { grid-template-columns:1fr; } }
+  .ozellik li { background:var(--card); border-radius:14px; padding:12px 14px; }
+  .ozellik b { display:block; }
+  .ozellik i { font-style:normal; color:var(--muted); font-size:15px; }
+  .renk { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; }
+  footer { text-align:center; color:var(--muted); font-size:14px; margin-top:34px; }
+  footer a { color:inherit; }
+</style>
+</head>
+<body>
+<main>
+  <div class="ust">
+    <img src="img/simge.png" alt="Renkli Gitar simgesi">
+    <h1>Renkli Gitar</h1>
+    <p class="alt">Akor ve Şarkı</p>
+    <div class="serit"></div>
+    <p class="slogan">Akorlarına renk kat.</p>
+    <div class="dugmeler">
+      <a class="dugme" id="ios" href="https://apps.apple.com/tr/app/renkli-gitar-guitar-chords/id6834511948">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.8-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.8zM14.2 5.8c.6-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.1 1.8-1 2.8 1.1.1 2.1-.5 2.8-1.3z"/></svg>
+        <span><small>iPhone ve iPad için</small><b>App Store'dan indir</b></span></a>
+      <a class="dugme" id="android" href="https://play.google.com/store/apps/details?id=com.akorist.akorist">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#30a46c" d="M4 3.5v17l9-8.5z"/><path fill="#0090ff" d="M4 3.5l12 6.9-3 1.6z"/><path fill="#e5484d" d="M4 20.5l12-6.9-3-1.6z"/><path fill="#f7b500" d="M16 10.4l3.6 2.1-3.6 2.1-3-2.1z"/></svg>
+        <span><small>Android için</small><b>Google Play'den al</b></span></a>
+    </div>
+    <p class="not">Ücretsiz indirilir · Uygulama içi satın alma içerir</p>
+  </div>
+
+  <div class="ekranlar" aria-label="Uygulamadan ekranlar">
+    <img src="img/akorlar.jpg" alt="Renkli akor şemaları" loading="lazy">
+    <img src="img/dizilim.jpg" alt="Akor dizilimi" loading="lazy">
+    <img src="img/sarki.jpg" alt="Şarkılar ve akorlar" loading="lazy">
+    <img src="img/akort.jpg" alt="Akort ölçer" loading="lazy">
+  </div>
+
+  <h2>Neler var?</h2>
+  <ul class="ozellik">
+    <li><b>Renkli akor şemaları</b><i><span class="renk" style="background:#e5484d"></span>Her nota görevinin renginde: kök, üçlü, beşli, yedili, dokuzlu.</i></li>
+    <li><b>41 akor türü</b><i>Majör, minörden add9, maj7, m9'a kadar; her akorun farklı pozisyonları.</i></li>
+    <li><b>Akor dizilimi</b><i>Renkli akorları yan yana diz, döngüde çal, sıradaki akoru önceden gör.</i></li>
+    <li><b>Şarkılar</b><i>Kendi şarkını yaz, akorları hecesine yerleştir; hazır şarkılarda akorları renklendir.</i></li>
+    <li><b>Akort ölçer</b><i>Mikrofonla tel tel akort; ses cihazda kalır.</i></li>
+    <li><b>Metronom</b><i>4/4'ten aksak 7/8 ve 9/8'e kadar ritimler.</i></li>
+  </ul>
+
+  <footer>
+    <p>Geliştirici: Fatih Bilgiç · <a href="https://nemorit.github.io/renkligitar/gizlilik.html">Gizlilik Politikası</a></p>
+  </footer>
+</main>
+<script>
+  // Yönlendirme yok: yalnız ziyaretçinin cihazına uygun buton en üste alınır.
+  var ua = navigator.userAgent || "";
+  if (/android/i.test(ua)) document.getElementById("android").classList.add("oncelik");
+</script>
+</body>
+</html>
